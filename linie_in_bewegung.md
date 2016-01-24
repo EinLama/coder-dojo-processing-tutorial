@@ -66,7 +66,7 @@ void draw() {
 
 ## Ein Rechteck dazumalen
 
-Jetzt malen wir noch ein Rechteck dazu, dass sich zusammen mit der Linie bewegt.
+Jetzt malen wir noch ein Rechteck dazu, das sich zusammen mit der Linie bewegt.
 
 ```java
 void draw() {
