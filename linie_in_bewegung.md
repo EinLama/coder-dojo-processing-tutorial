@@ -4,6 +4,8 @@ Hier malen wir ein Fenster, in dem sich eine Linie hin- und herbewegt.
 
 ## Fenster mit Linie
 
+Am besten direkt Copy und Pasten! Direkt das Ergebnis zeigen und danach den Code erklären.
+
 ```java
 // wird einmal beim Programmstart aufgerufen
 void setup() {
@@ -21,6 +23,8 @@ void draw() {
   line(0, 300, 800, 300);
 }
 ```
+
+Die Farben, die bei `stroke` und `background` verwendet werden, sind im RGB-Format. RGB erklären :) Ich verwende dafür immer Wasserfarben, da kann man die Farben ja auch mischen.
 
 ## Die Linie bewegt sich
 
@@ -59,3 +63,37 @@ void draw() {
   }
 }
 ```
+
+## Ein Rechteck dazumalen
+
+Jetzt malen wir noch ein Rechteck dazu, dass sich zusammen mit der Linie bewegt.
+
+```java
+void draw() {
+  background(0, 0, 0);
+  
+  fill(200, 0, 200);
+  // Rechteck malen
+  rect(width / 2 - 50, // X
+       lineY - 20,     // Y
+       100,            // Breite
+       40);            // Höhe
+
+  // ...
+}
+```
+
+`fill` setzt die Füllfarbe. Alle Formen, die komplexer als eine Linie sind, haben eine Randfarbe und eine Füllfarbe. Die Randfarbe wird mit `stroke` gesetzt, die Füllfarbe mit `fill`.
+
+Achtung, die Reihenfolge der Zeichenbefehle ist wichtig! Wenn man zuerst `rect` und dann `line` aufruft, wird zuerst das Rechteck gemalt, und die Linie oberhalb davon. Wie bei einer Leinwand. Was man zuerst malt, wird von nachfolgenden Pinselstrichen übermalt.
+
+## Aufgaben
+
+An dieser Stelle sollten die Kinder experimentieren. Folgende Möglichkeiten gibt es zum Beispiel:
+
+* mit `strokeWeight(widthInPixels)` kann die Strichdicke beeinflusst werden. Damit kann man einen coolen Comicstyle kreieren. Einfach mal `strokeWeight(10)` setzen und schauen, was passiert.
+* wie kann man per `rect` ein Quadrat malen? Ein Quadrat ist ja auch ein Rechteck, oder?
+* mit `ellipse` kann man eine Ellipse - oder eben einen Kreis malen. Die Funktion akzeptiert die gleichen Parameter, wie `rect`.
+
+
+
