@@ -66,8 +66,10 @@ void draw() {
   stroke(255, 255, 255);
   line(0, lineY, 800, lineY);
   
+  // Wichtig: hier wird die Bewegung umgesetzt!
   lineY = lineY + lineSpeed;
   
+  // Wir wollen nicht, dass die Linie das Fenster verlässt:
   if (lineY >= height) { // Bildschirm unten verlassen?
     lineSpeed = -lineSpeed;  // Beschleunigung umkehren
   }
