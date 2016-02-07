@@ -28,3 +28,9 @@ Ich fange gerne mit diesen Icebreakern an:
 
 [Linie, die sich bewegt](linie_in_bewegung.md)  
 [Einfaches Malprogramm](malen.md)
+
+# Echte Spiele
+
+Diese Projekte sind dann schon etwas aufwändiger.
+
+[Pong](pong.md)

@@ -43,7 +43,7 @@ wird der Strich.
 
 Das alleine macht noch nicht so viel her...
 
-## zwei Pinsel gleichzeitig
+# zwei Pinsel gleichzeitig
 
 Wie wäre es mit einem weiteren Pinsel, der spiegelverkehrt malt? Das klingt
 komplizierter als es ist:
