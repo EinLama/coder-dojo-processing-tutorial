@@ -24,6 +24,11 @@ void draw() {
 }
 ```
 
+Um zu verstehen, wie man Punkte im Fenster angibt (X- und Y-Position), muss man ein Koordinatensystem verstehen. Das funktioniert im Computer aber etwas anders als in der Mathematik. Der Nullpunkt ist nicht unten links,
+sondern _oben_ links. Siehe dazu auch diese Zeichnung:
+
+![Koordinatensystem](images/coord.png)
+
 Die Farben, die bei `stroke` und `background` verwendet werden, sind im RGB-Format. RGB erklären :) Ich verwende dafür immer Wasserfarben, da kann man die Farben ja auch mischen.
 
 ## Die Linie bewegt sich
