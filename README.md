@@ -26,5 +26,5 @@ Wenn man die Binary ausführt, sieht man einen Editor. Per PLAY-button (oder ^R,
 
 Ich fange gerne mit diesen Icebreakern an:
 
-[Linie, die sich bewegt](linie_in_bewegung.md)
+[Linie, die sich bewegt](linie_in_bewegung.md)  
 [Einfaches Malprogramm](malen.md)
