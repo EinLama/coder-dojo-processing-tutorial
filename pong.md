@@ -56,3 +56,47 @@ Danach haben wir dieses Ergebnis:
 
 ![Pong Spielaufbau](images/pong1.png)
 
+## Die Schläger bewegen
+
+Wir definieren eine Variable für die Geschwindigkeit. Damit können wir selbige leichter ändern, bis wir mit dem Ergebnis
+zufrieden sind.
+
+```java
+float playerSpeed = 5.0;
+```
+
+Dann kommt noch eine neue Funktion dazu, in der die ganze Bewegungsmagie passiert:
+
+```java
+/* Diese Funktion wird immer aufgerufen, wenn eine Taste gedrückt wird.
+ * Wir schauen in der Variable `key` oder `keyCode` nach, welche Tasten gerade
+ * gedrückt werden und reagieren darauf. */
+void keyPressed() {
+  
+  // Rechter Schläger, reagiert auf Pfeiltaste hoch und runter.
+  // Bei den Pfeiltasten muss man in der Variable `keyCode` nachsehen
+  if (keyCode == DOWN) {
+    player2y = player2y + playerSpeed; 
+  }
+  if (keyCode == UP) {
+    player2y = player2y - playerSpeed;
+  }
+  
+  // Linker Schläger, lauscht auf `w` und `s`.
+  // Für Tasten mit Buchstaben darauf muss man in der Variable `key` nachsehen.
+  if (key == 's') {
+    player1y = player1y + playerSpeed; 
+  }
+  if (key == 'w') {
+    player1y = player1y - playerSpeed; 
+  }
+}
+```
+
+Wer es ausprobiert, wird schnell merken, dass hier einige Dinge nicht stimmen.
+
+* die Bewegung mit W und S passiert nur _einmal_ bei Tastendruck. Danach muss man loslassen und die Taste erneut drücken, damit sich der linke Schläger bewegt.
+* die Pfeiltasten funktionieren zwar besser, man kann die Taste gedrückt halten. Dennoch, nach dem Drücken gibt es eine kurze, merkliche Verzögerung, bis die Bewegung weitergeht.
+
+Das ist beides nicht cool! Der rechte Spieler hat einen deutlichen Vorteil durch die bessere Bewegung. Beide sollten sich gleich bewegen. Und die Verzögerung muss auch weg, sonst fühlt es sich komisch an.
+
